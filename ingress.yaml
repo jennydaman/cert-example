@@ -2,13 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: cert-example
+  annotations:
+    cert-manager.io/issuer: letsencrypt-staging-b9bc25
+    acme.cert-manager.io/http01-ingress-class: openshift-default
 spec:
+  ingressClassName: openshift-default
   tls:
   - hosts:
-      - cert-example.oddbit.com
+      - cert-example.chrisproject.org
     secretName: cert-example-tls
   rules:
-  - host: cert-example.oddbit.com
+  - host: cert-example.chrisproject.org
     http:
       paths:
       - path: /

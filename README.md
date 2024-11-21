@@ -1,4 +1,4 @@
-This deploys a web service at <https://cert-example.oddbit.com/>.
+This deploys a web service at <https://cert-example.chrisproject.org/>.
 
 After deploying this repository and waiting about 5 minutes:
 

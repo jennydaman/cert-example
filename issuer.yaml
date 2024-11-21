@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-staging-b9bc25
+spec:
+  acme:
+    privateKeySecretRef:
+      name: letsencrypt-staging-key-b9bc25  # must be something unique
+    solvers:
+      - http01:
+          ingress:
+            class: openshift-default
+    server: 'https://acme-staging-v02.api.letsencrypt.org/directory'
+    email: dev@babymri.org
