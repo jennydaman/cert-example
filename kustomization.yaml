@@ -4,7 +4,6 @@ commonLabels:
   app: cert-example
 
 resources:
-- imagestream.yaml
 - deployment.yaml
 - service.yaml
 - certificate.yaml
